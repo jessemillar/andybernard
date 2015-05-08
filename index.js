@@ -8,7 +8,7 @@ var message = {
     text: 'Hello!',
     channel: '#bottest',
     username: 'andybernard',
-    icon_url: "http://www.jessemillar.com/andy-bernard/images/andy.png"
+    icon_url: "http://www.jessemillar.com/andybernard/images/andy.png"
 };
     
 slack.notify(message);
