@@ -1,14 +1,15 @@
-var config = require('./config.js');
+var slackbot = require('node-slackbot');
 
-Slack = require('node-slackr');
+var bot = new slackbot('xoxb-4783098406-oickxKu4Lh1AOphmqJUfK4C0');
 
-slack = new Slack(config.hookURI);
+bot.use(function(message, callback) {
+    if ('message' == message.type) {
+        console.log(message.user + ' said: ' + message.text);
 
-var message = {
-    text: 'Hello!',
-    channel: '#bottest',
-    username: 'andybernard',
-    icon_url: "http://www.jessemillar.com/andybernard/images/andy.png"
-};
-    
-slack.notify(message);
+        bot.sendMessage(message.channel, 'Test');
+    }
+
+    callback();
+});
+
+bot.connect();
