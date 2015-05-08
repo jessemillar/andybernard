@@ -5,7 +5,7 @@ A simple Slack bot written to confuse the people who work in my office. Andy Ber
 
 2) Andy lets everyone know it's time to go home with the clock strikes 4:59pm by posting a Spotify link to the song "Closing Time" as sung by Semisonic.
 
-There is a bug that causes Andy to greet each new organization member with a GIF in the #general channel when they create an account. I'm gonna leave this because it's a comical feature.
+There is a bug that causes Andy to greet each new organization member with a GIF in the #general channel when they create an account. I'm gonna leave this because it's a comical "feature."
 
 **Note:** Be sure to set the time offset in index.js so that the server knows what time 5pm is for your office (since your server may not be in the same timezone).
 
