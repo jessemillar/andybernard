@@ -10,11 +10,15 @@ var gifURL = 'http://www.jessemillar.com/andybernard/images/gifs/',
     closingTime = 'https://open.spotify.com/track/1A5V1sxyCLpKJezp75tUXn';
 
 var date = new Date();
-console.log('The current time is ' + Number(date.getHours() - timeOffset) + ':' + date.getMinutes());
+console.log('The current time is ' + Number(date.getHours() - timeOffset) + ':' + date.getMinutes() + ' on day index ' + date.getDay());
 
 setInterval(function() { // Tell everyone when it's time to go home (at 5pm)
-    if (new Date().getHours() == (17 + timeOffset) && new Date().getMinutes() == 59) {
-        needle.get('https://slack.com/api/chat.postMessage?token=' + config.apiToken + "&channel=%23general&text=It's%20closing%20time%2C%20everybody!%20https%3A%2F%2Fopen.spotify.com%2Ftrack%2F1A5V1sxyCLpKJezp75tUXn");
+    var date = new Date();
+
+    if (date.getDay() > 0 && date.getDay < 6) { // If it's a weekday
+        if (date.getHours() == (16 + timeOffset) && date.getMinutes() == 59) { // Push a message one minute before 5pm
+            needle.get('https://slack.com/api/chat.postMessage?token=' + config.apiToken + "&channel=%23general&text=It's%20closing%20time%2C%20everybody!%20https%3A%2F%2Fopen.spotify.com%2Ftrack%2F1A5V1sxyCLpKJezp75tUXn");
+        }
     }
 }, 1000 * 60); // Check the time every minute
 
