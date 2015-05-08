@@ -1,7 +1,7 @@
 var slackbot = require('node-slackbot');
 
 var gifURL = 'http://www.jessemillar.com/andybernard/images/gifs/';
-var gifs = [gifURL + 'awkward.gif', gifURL + 'dancing.gif', gifURL + 'flying.gif', gifURL + 'lachrymose.gif', gifURL + 'nailed it.gif', gifURL + 'smug.gif'];
+var gifs = [gifURL + 'awkward.gif', gifURL + 'dancing.gif', gifURL + 'flying.gif', gifURL + 'lachrymose.gif', gifURL + 'nailed.gif', gifURL + 'smug.gif'];
 
 var closingTime = 'https://open.spotify.com/track/1A5V1sxyCLpKJezp75tUXn';
 
