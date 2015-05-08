@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A simple Slack bot",
   "dependencies": {
-    "moment-timezone": "^0.3.1",
     "needle": "^0.9.2",
     "node-slackbot": "^0.0.6"
   },
