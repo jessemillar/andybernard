@@ -8,7 +8,8 @@ var gifURL = 'http://www.jessemillar.com/andybernard/images/gifs/',
     gifs = [gifURL + 'awkward.gif', gifURL + 'dancing.gif', gifURL + 'flying.gif', gifURL + 'lachrymose.gif', gifURL + 'nailed.gif', gifURL + 'smug.gif'],
     closingTime = 'https://open.spotify.com/track/1A5V1sxyCLpKJezp75tUXn';
 
-console.log('The current time is ' + new Date().getHours() + ':' + new Date.getMinutes());
+var date = new Date();
+console.log('The current time is ' + date.getHours() + ':' + date.getMinutes());
 
 setInterval(function() { // Tell everyone when it's time to go home (at 5pm)
     if (new Date().getHours() == 16 && new Date().getMinutes() == 59) {
